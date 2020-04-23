@@ -9,7 +9,6 @@ const SyncTargetRegistry = require('lib/SyncTargetRegistry');
 const shared = require('lib/components/shared/config-shared.js');
 const ConfigMenuBar = require('./ConfigMenuBar.min.js');
 const { EncryptionConfigScreen } = require('./EncryptionConfigScreen.min');
-const { ClipperConfigScreen } = require('./ClipperConfigScreen.min');
 
 class ConfigScreenComponent extends React.Component {
 	constructor() {
@@ -67,7 +66,6 @@ class ConfigScreenComponent extends React.Component {
 
 	screenFromName(screenName) {
 		if (screenName === 'encryption') return <EncryptionConfigScreen theme={this.props.theme}/>;
-		if (screenName === 'server') return <ClipperConfigScreen theme={this.props.theme}/>;
 
 		throw new Error(`Invalid screen name: ${screenName}`);
 	}

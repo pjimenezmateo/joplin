@@ -83,8 +83,6 @@
 				"ElectronClient/dist",
 				"_releases",
 				"ReactNativeClient/lib/csstojs",
-				"Clipper/popup/build",
-				"Clipper/dist",
 				"ReactNativeClient/lib/rnInjectedJs",
 				"ReactNativeClient/ios/Pods",
 				"CliClient/locales-build",

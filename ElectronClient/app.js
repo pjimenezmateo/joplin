@@ -20,7 +20,6 @@ const DecryptionWorker = require('lib/services/DecryptionWorker');
 const InteropService = require('lib/services/InteropService');
 const InteropServiceHelper = require('./InteropServiceHelper.js');
 const ResourceService = require('lib/services/ResourceService');
-const ClipperServer = require('lib/ClipperServer');
 const ExternalEditWatcher = require('lib/services/ExternalEditWatcher');
 const { bridge } = require('electron').remote.require('./bridge');
 const { shell, webFrame, clipboard } = require('electron');
@@ -1397,17 +1396,6 @@ class Application extends BaseApplication {
 
 				DecryptionWorker.instance().scheduleStart();
 			});
-		}
-
-		const clipperLogger = new Logger();
-		clipperLogger.addTarget('file', { path: `${Setting.value('profileDir')}/log-clipper.txt` });
-		clipperLogger.addTarget('console');
-
-		ClipperServer.instance().setLogger(clipperLogger);
-		ClipperServer.instance().setDispatch(this.store().dispatch);
-
-		if (Setting.value('clipperServer.autoStart')) {
-			ClipperServer.instance().start();
 		}
 
 		ExternalEditWatcher.instance().setLogger(reg.logger());

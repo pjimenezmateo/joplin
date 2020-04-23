@@ -502,7 +502,6 @@ class Setting extends BaseModel {
 
 			autoUpdateEnabled: { value: true, type: Setting.TYPE_BOOL, section: 'application', public: true, appTypes: ['desktop'], label: () => _('Automatically update the application') },
 			'autoUpdate.includePreReleases': { value: false, type: Setting.TYPE_BOOL, section: 'application', public: true, appTypes: ['desktop'], label: () => _('Get pre-releases when checking for updates'), description: () => _('See the pre-release page for more details: %s', 'https://joplinapp.org/prereleases') },
-			'clipperServer.autoStart': { value: false, type: Setting.TYPE_BOOL, public: false },
 			'sync.interval': {
 				value: 300,
 				type: Setting.TYPE_INT,
@@ -1024,7 +1023,6 @@ class Setting extends BaseModel {
 		if (name === 'application') return _('Application');
 		if (name === 'revisionService') return _('Note History');
 		if (name === 'encryption') return _('Encryption');
-		if (name === 'server') return _('Web Clipper');
 		return name;
 	}
 

@@ -232,9 +232,6 @@ class Api {
 	}
 
 	async action_ping(request) {
-		if (request.method === 'GET') {
-			return 'JoplinClipperServer';
-		}
 
 		throw new ErrorMethodNotAllowed();
 	}

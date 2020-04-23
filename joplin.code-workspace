@@ -57,8 +57,6 @@
 			"CliClient/tests/sync/": true,
 			"CliClient/tests/tmp/": true,
 			"CliClient/tests/logs/": true,
-			"Clipper/dist/": true,
-			"Clipper/popup/build/": true,
 			"ElectronClient/dist/": true,
 			"ElectronClient/fonts/": true,
 			"ElectronClient/gui/note-viewer/highlight/styles/": true,
