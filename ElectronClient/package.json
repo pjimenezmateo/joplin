@@ -4,7 +4,7 @@
   "description": "Joplin for Desktop",
   "main": "main.js",
   "scripts": {
-    "dist": "node_modules/.bin/electron-builder",
+    "dist": "node_modules/.bin/electron-builder --win --linux --x64",
     "build": "patch-package --patch-dir ../patches && gulp build",
     "postinstall": "npm run build && gulp electronRebuild",
     "start": "gulp build && electron . --env dev --log-level debug --no-welcome --open-dev-tools"
