@@ -14,8 +14,6 @@ const updateIgnoredTypeScriptBuildTask = async function() {
 			'**/node_modules/**',
 			'**/.git/**',
 			'**/ElectronClient/lib/**',
-			'**/CliClient/build/lib/**',
-			'**/CliClient/tests-build/lib/**',
 			'**/ElectronClient/dist/**',
 			'**/Modules/TinyMCE/JoplinLists/**',
 			'**/Modules/TinyMCE/IconPack/**',

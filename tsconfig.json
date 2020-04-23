@@ -18,7 +18,6 @@
     "include": [
         "ReactNativeClient/**/*",
         "ElectronClient/**/*",
-        "CliClient/**/*",
 	],
 	"exclude": [
 		"**/node_modules",
